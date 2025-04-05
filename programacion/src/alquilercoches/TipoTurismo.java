@@ -1,6 +1,6 @@
 package alquilercoches;
 
-public enum TipoTurismo {
+public enum TipoTurismo implements Tipo {
     PEQUENO,
     MEDIANO,
     LUJO
