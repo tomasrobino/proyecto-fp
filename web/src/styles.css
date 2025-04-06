@@ -229,6 +229,55 @@ main p {
     left: 0;
 }
 
+.cronologia {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.cronologia::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background-color: #e0e0e0;
+    left: 50px;
+    top: 0;
+}
+
+.cronologia-item {
+    position: relative;
+    padding-left: 100px;
+    margin-bottom: 50px;
+}
+
+.cronologia-año {
+    position: absolute;
+    left: 0;
+    width: 100px;
+    height: 30px;
+    background-color: #ff6b00;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.cronologia-contenido {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cronologia-contenido h4 {
+    color: #ff6b00;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
 /* Tarjetas */
 .grupo-tarjetas {
     display: flex;
@@ -354,6 +403,19 @@ footer {
 
     .seccion-footer {
         flex-basis: 100%;
+    }
+
+    .cronologia::before {
+        left: 20px;
+    }
+
+    .cronologia-item {
+        padding-left: 60px;
+    }
+
+    .cronologia-año {
+        width: 80px;
+        left: -20px;
     }
 }
 
