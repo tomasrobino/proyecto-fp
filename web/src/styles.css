@@ -415,6 +415,15 @@ footer {
         width: 80px;
         left: -20px;
     }
+
+    .filtro-principal, .filtro-secundario {
+        flex-direction: column;
+    }
+
+    .filtro-btn, .filtro-subtipo-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
 }
 
 @media (max-width: 576px) {
@@ -429,4 +438,108 @@ footer {
     .titulo h2 {
         font-size: 28px;
     }
+}
+
+/* Estilos para la página de vehículos disponibles */
+.filtro-vehiculos {
+    margin-bottom: 30px;
+}
+
+.filtro-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filtro-btn, .filtro-subtipo-btn {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.filtro-btn:hover, .filtro-subtipo-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.filtro-btn.active, .filtro-subtipo-btn.active {
+    background-color: #ff6b00;
+    color: #fff;
+    border-color: #ff6b00;
+}
+
+.filtro-secundario {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.filtro-secundario h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Estilos para las tarjetas de vehículos */
+.vehiculo-imagen {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 15px;
+}
+
+.vehiculo-tipo {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.vehiculo-detalles {
+    margin: 15px 0;
+}
+
+.vehiculo-detalles p {
+    margin-bottom: 5px;
+}
+
+.vehiculo-precio {
+    color: #ff6b00;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+/* Estilos para la paginación */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.paginacion a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.paginacion a:hover, .paginacion a.active {
+    background-color: #ff6b00;
+    color: #fff;
+    border-color: #ff6b00;
+}
+
+.paginacion a.siguiente {
+    padding: 8px 15px;
 }
