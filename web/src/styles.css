@@ -279,9 +279,13 @@ nav ul li a.active::after {
 /* Tarjetas */
 .grupo-tarjetas {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 30px;
+}
+
+.vehiculo-card {
+    margin: 0 1%;
 }
 
 .tarjeta {
