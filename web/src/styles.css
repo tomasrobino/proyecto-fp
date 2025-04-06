@@ -303,12 +303,6 @@ nav ul li a.active::after {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.tarjeta i {
-    font-size: 40px;
-    color: #ff6b00;
-    margin-bottom: 20px;
-}
-
 .tarjeta h3 {
     font-size: 22px;
     margin-bottom: 15px;
