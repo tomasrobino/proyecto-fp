@@ -1,3 +1,15 @@
+/*
+----------------------------------------------------------------
+
+Como está actualmente da un error de CORS porque noticias.rss es un archivo local.
+Utilizé un servidor local de python con el comando:
+python3 -m http.server
+para comprobar que funcione
+
+----------------------------------------------------------------
+ */
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Obtiene el RSS de noticias
     fetch('noticias.rss')
