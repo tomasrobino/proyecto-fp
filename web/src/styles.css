@@ -87,7 +87,7 @@ nav ul li a.active::after {
 
 /* main */
 main {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-bg.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -106,6 +106,7 @@ main p {
     margin-bottom: 30px;
 }
 
+/* Botón */
 .btn {
     display: inline-block;
     background-color: #ff6b00;
@@ -124,7 +125,6 @@ main p {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Features Section */
 .positivos {
     padding: 80px 0;
     text-align: center;
@@ -148,6 +148,88 @@ main p {
     background-color: #ff6b00;
 }
 
+/* Sección de información de empresa */
+.empresa-info {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.info-texto {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.info-texto h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.info-texto h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #ff6b00;
+}
+
+.info-texto p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.info-imagen img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.seccion {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.seccion h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.seccion h2::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ff6b00;
+}
+
+.valores-lista {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.valores-lista li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.valores-lista li:before {
+    content: "✓";
+    color: #ff6b00;
+    position: absolute;
+    left: 0;
+}
+
+/* Tarjetas */
 .grupo-tarjetas {
     display: flex;
     justify-content: space-between;
@@ -162,6 +244,7 @@ main p {
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .tarjeta:hover {
@@ -184,7 +267,6 @@ main p {
 footer {
     background-color: #222;
     color: #fff;
-    padding: 60px 0 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -235,11 +317,15 @@ footer {
 @media (max-width: 992px) {
     .tarjeta {
         flex-basis: calc(50% - 20px);
-        margin-bottom: 30px;
     }
 
     .seccion-footer {
         flex-basis: 48%;
+    }
+
+    .info-texto {
+        padding-right: 0;
+        margin-bottom: 30px;
     }
 }
 
