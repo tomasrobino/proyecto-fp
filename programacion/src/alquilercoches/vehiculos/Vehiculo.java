@@ -5,4 +5,6 @@ import java.util.Date;
 public abstract class Vehiculo {
     double precio;
     Date fechaMantenimiento;
+    Date fabricacion;
+    int aptitud;
 }
