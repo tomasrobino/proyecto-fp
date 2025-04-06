@@ -115,6 +115,7 @@ nav ul li a.active::after {
     font-weight: 600;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -320,6 +321,54 @@ nav ul li a.active::after {
     height: fit-content;
     margin: 5px;
     background-color: #fff;
+}
+
+/* Estilos para el formulario de contacto */
+.form-grupo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-campo {
+    flex: 1;
+    min-width: 250px;
+}
+
+.form-campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-campo input,
+.form-campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.form-campo textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-check {
+    margin-bottom: 20px;
+}
+
+.form-check input {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.form-check label {
+    vertical-align: middle;
 }
 
 /* Footer */
