@@ -604,3 +604,27 @@ footer {
 .paginacion a.siguiente {
     padding: 8px 15px;
 }
+
+
+/* página de noticias */
+.noticia-fecha {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+.noticia-fecha .dia {
+    font-weight: bold;
+    margin-right: 5px;
+}
+.noticia-fecha .mes,
+.noticia-fecha .anio {
+    margin-right: 5px;
+}
+
+.noticia-contenido h3 {
+    margin-bottom: 10px;
+}
+
+.noticia-contenido p {
+    margin-bottom: 15px;
+}
