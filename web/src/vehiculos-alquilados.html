@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehículos Alquilados - Rent a Car</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="filtrado.js"></script>
+</head>
+<body>
+<header>
+    <div class="div">
+        <div class="logo">
+            <h1>Rent a Car</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="empresa.html">Nuestra Empresa</a></li>
+                <li><a href="vehiculos-disponibles.html">Vehículos Disponibles</a></li>
+                <li><a href="vehiculos-alquilados.html" class="active">Vehículos Alquilados</a></li>
+                <li><a href="rss.html">Novedades</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="titulo">
+    <div class="div">
+        <h2>Vehículos Alquilados</h2>
+        <p>Información sobre los vehículos actualmente alquilados</p>
+    </div>
+</div>
+
+<section class="seccion">
+    <div class="div">
+        <h2>Filtrar por tipo</h2>
+        <div class="filtro-vehiculos">
+            <div class="filtro-principal">
+                <button class="btn filtro-btn active" data-filter="todos">Todos</button>
+                <button class="btn filtro-btn" data-filter="motocicleta">Motocicleta</button>
+                <button class="btn filtro-btn" data-filter="turismo">Turismo</button>
+                <button class="btn filtro-btn" data-filter="furgoneta">Furgoneta</button>
+            </div>
+            <div class="filtro-secundario" id="subtipo-turismo" style="display: none;">
+                <h3>Tipo de Turismo:</h3>
+                <button class="btn filtro-subtipo-btn" data-subfilter="pequeño">Pequeño</button>
+                <button class="btn filtro-subtipo-btn" data-subfilter="mediano">Mediano</button>
+                <button class="btn filtro-subtipo-btn" data-subfilter="lujo">Lujo</button>
+            </div>
+            <div class="filtro-secundario" id="subtipo-furgoneta" style="display: none;">
+                <h3>Tipo de Furgoneta:</h3>
+                <button class="btn filtro-subtipo-btn" data-subfilter="estandar">Estándar</button>
+                <button class="btn filtro-subtipo-btn" data-subfilter="gran-carga">Gran carga</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="seccion">
+    <div class="div">
+        <div class="grupo-tarjetas vehiculos-lista">
+            <!-- Motocicletas -->
+            <div class="tarjeta vehiculo-card" data-tipo="motocicleta">
+                <img src="img/vehiculos/moto1.jpg" alt="Honda CBR 650R" class="vehiculo-imagen">
+                <h3>Honda CBR 650R</h3>
+                <p class="vehiculo-tipo">Motocicleta</p>
+                <div class="vehiculo-detalles">
+                    <p><strong>Cliente:</strong> Ana García Pérez</p>
+                    <p><strong>DNI:</strong> 12345678A</p>
+                    <p><strong>Teléfono:</strong> 612 345 678</p>
+                    <p><strong>Fecha inicio:</strong> 01/04/2025</p>
+                    <p><strong>Fecha fin:</strong> 08/04/2025</p>
+                </div>
+                <p class="vehiculo-precio">45€/día (7 días)</p>
+                
+            </div>
+
+            <div class="tarjeta vehiculo-card" data-tipo="motocicleta">
+                <img src="img/vehiculos/moto2.jpg" alt="Yamaha MT-07" class="vehiculo-imagen">
+                <h3>Yamaha MT-07</h3>
+                <p class="vehiculo-tipo">Motocicleta</p>
+                <div class="vehiculo-detalles">
+                    <p><strong>Cliente:</strong> Pablo Moreno Santos</p>
+                    <p><strong>DNI:</strong> 23456789B</p>
+                    <p><strong>Teléfono:</strong> 623 456 789</p>
+                    <p><strong>Fecha inicio:</strong> 03/04/2025</p>
+                    <p><strong>Fecha fin:</strong> 10/04/2025</p>
+                </div>
+                <p class="vehiculo-precio">40€/día (7 días)</p>
+            </div>
+
+            <!-- Turismos - Pequeños -->
+            <div class="tarjeta vehiculo-card" data-tipo="turismo" data-subtipo="pequeño">
+                <img src="img/vehiculos/sedan1.jpg" alt="Seat Ibiza" class="vehiculo-imagen">
+                <h3>Seat Ibiza</h3>
+                <p class="vehiculo-tipo">Turismo - Pequeño</p>
+                <div class="vehiculo-detalles">
+                    <p><strong>Cliente:</strong> Laura Martínez López</p>
+                    <p><strong>DNI:</strong> 34567890C</p>
+                    <p><strong>Teléfono:</strong> 634 567 890</p>
+                    <p><strong>Fecha inicio:</strong> 02/04/2025</p>
+                    <p><strong>Fecha fin:</strong> 09/04/2025</p>
+                </div>
+                <p class="vehiculo-precio">35€/día (7 días)</p>
+                
+            </div>
+
+            <div class="tarjeta vehiculo-card" data-tipo="turismo" data-subtipo="pequeño">
+                <img src="img/vehiculos/sedan2.jpg" alt="Renault Clio" class="vehiculo-imagen">
+                <h3>Renault Clio</h3>
+                <p class="vehiculo-tipo">Turismo - Pequeño</p>
+                <div class="vehiculo-detalles">
+                    <p><strong>Cliente:</strong> Carlos Sánchez Gómez</p>
+                    <p><strong>DNI:</strong> 45678901D</p>
+                    <p><strong>Teléfono:</strong> 645 678 901</p>
+                    <p><strong>Fecha inicio:</strong> 05/04/2025</p>
+                    <p><strong>Fecha fin:</strong> 10/04/2025</p>
+                </div>
+                <p class="vehiculo-precio">30€/día (5 días)</p>
+                
+            </div>
+
+            <!-- Turismos - Medianos -->
+            <div class="tarjeta vehiculo-card" data-tipo="turismo" data-subtipo="mediano">
+                <img src="img/vehiculos/sedan3.jpg" alt="Toyota Corolla" class="vehiculo-imagen">
+                <h3>Toyota Corolla</h3>
+                <p class="vehiculo-tipo">Turismo - Mediano</p>
+                <div class="vehiculo-detalles">
+                    <p><strong>Cliente:</strong> María Rodríguez Navarro</p>
+                    <p><strong>DNI:</strong> 56789012E</p>
+                    <p><strong>Teléfono:</strong> 656 789 012</p>
+                    <p><strong>Fecha inicio:</strong> 29/03/2025</p>
+                    <p><strong>Fecha fin:</strong> 12/04/2025</p>
+                </div>
+                <p class="vehiculo-precio">45€/día (14 días)</p>
+                
+            </div>
+
+            <div class="tarjeta vehiculo-card" data-tipo="turismo" data-subtipo="mediano">
+                <img src="img/vehiculos/sedan4.jpg" alt="Volkswagen Passat" class="vehiculo-imagen">
+                <h3>Volkswagen Passat</h3>
+                <p class="vehiculo-tipo">Turismo - Mediano</p>
+                <div class="vehiculo-detalles">
+                    <p><strong>Cliente:</strong> Juan López Fernández</p>
+                    <p><strong>DNI:</strong> 67890123F</p>
+                    <p><strong>Teléfono:</strong> 667 890 123</p>
+                    <p><strong>Fecha inicio:</strong> 01/04/2025</p>
+                    <p><strong>Fecha fin:</strong> 15/04/2025</p>
+                </div>
+                <p class="vehiculo-precio">50€/día (14 días)</p>
+                
+            </div>
+
+            <!-- Turismos - Lujo -->
+            <div class="tarjeta vehiculo-card" data-tipo="turismo" data-subtipo="lujo">
+                <img src="img/vehiculos/luxury1.jpg" alt="Mercedes Clase S" class="vehiculo-imagen">
+                <h3>Mercedes Clase S</h3>
+                <p class="vehiculo-tipo">Turismo - Lujo</p>
+                <div class="vehiculo-detalles">
+                    <p><strong>Cliente:</strong> David Ruiz Torres</p>
+                    <p><strong>DNI:</strong> 78901234G</p>
+                    <p><strong>Teléfono:</strong> 678 901 234</p>
+                    <p><strong>Fecha inicio:</strong> 03/04/2025</p>
+                    <p><strong>Fecha fin:</strong> 06/04/2025</p>
+                </div>
+                <p class="vehiculo-precio">120€/día (3 días)</p>
+                
+            </div>
+
+            <div class="tarjeta vehiculo-card" data-tipo="turismo" data-subtipo="lujo">
+                <img src="img/vehiculos/luxury2.jpg" alt="BMW Serie 7" class="vehiculo-imagen">
+                <h3>BMW Serie 7</h3>
+                <p class="vehiculo-tipo">Turismo - Lujo</p>
+                <div class="vehiculo-detalles">
+                    <p><strong>Cliente:</strong> Elena Díaz Hernández</p>
+                    <p><strong>DNI:</strong> 89012345H</p>
+                    <p><strong>Teléfono:</strong> 689 012 345</p>
+                    <p><strong>Fecha inicio:</strong> 28/03/2025</p>
+                    <p><strong>Fecha fin:</strong> 11/04/2025</p>
+                </div>
+                <p class="vehiculo-precio">110€/día (14 días)</p>
+                
+            </div>
+
+            <!-- Furgonetas - Estándar -->
+            <div class="tarjeta vehiculo-card" data-tipo="furgoneta" data-subtipo="estandar">
+                <img src="img/vehiculos/van1.jpg" alt="Mercedes Vito" class="vehiculo-imagen">
+                <h3>Mercedes Vito</h3>
+                <p class="vehiculo-tipo">Furgoneta - Estándar</p>
+                <div class="vehiculo-detalles">
+                    <p><strong>Cliente:</strong> Roberto Muñoz Blanco</p>
+                    <p><strong>DNI:</strong> 90123456I</p>
+                    <p><strong>Teléfono:</strong> 690 123 456</p>
+                    <p><strong>Fecha inicio:</strong> 04/04/2025</p>
+                    <p><strong>Fecha fin:</strong> 11/04/2025</p>
+                </div>
+                <p class="vehiculo-precio">75€/día (7 días)</p>
+                
+            </div>
+
+            <div class="tarjeta vehiculo-card" data-tipo="furgoneta" data-subtipo="estandar">
+                <img src="img/vehiculos/van2.jpg" alt="Renault Traffic" class="vehiculo-imagen">
+                <h3>Renault Traffic</h3>
+                <p class="vehiculo-tipo">Furgoneta - Estándar</p>
+                <div class="vehiculo-detalles">
+                    <p><strong>Cliente:</strong> Lucía Castro Gil</p>
+                    <p><strong>DNI:</strong> 01234567J</p>
+                    <p><strong>Teléfono:</strong> 601 234 567</p>
+                    <p><strong>Fecha inicio:</strong> 02/04/2025</p>
+                    <p><strong>Fecha fin:</strong> 09/04/2025</p>
+                </div>
+                <p class="vehiculo-precio">65€/día (7 días)</p>
+                
+            </div>
+
+            <!-- Furgonetas - Gran carga -->
+            <div class="tarjeta vehiculo-card" data-tipo="furgoneta" data-subtipo="gran-carga">
+                <img src="img/vehiculos/van3.jpg" alt="Iveco Daily" class="vehiculo-imagen">
+                <h3>Iveco Daily</h3>
+                <p class="vehiculo-tipo">Furgoneta - Gran carga</p>
+                <div class="vehiculo-detalles">
+                    <p><strong>Cliente:</strong> Javier Ortega Medina</p>
+                    <p><strong>DNI:</strong> 12345670K</p>
+                    <p><strong>Teléfono:</strong> 612 345 670</p>
+                    <p><strong>Fecha inicio:</strong> 01/04/2025</p>
+                    <p><strong>Fecha fin:</strong> 08/04/2025</p>
+                </div>
+                <p class="vehiculo-precio">85€/día (7 días)</p>
+                
+            </div>
+
+            <div class="tarjeta vehiculo-card" data-tipo="furgoneta" data-subtipo="gran-carga">
+                <img src="img/vehiculos/van4.jpg" alt="Ford Transit" class="vehiculo-imagen">
+                <h3>Ford Transit</h3>
+                <p class="vehiculo-tipo">Furgoneta - Gran carga</p>
+                <div class="vehiculo-detalles">
+                    <p><strong>Cliente:</strong> Sofía Vega Romero</p>
+                    <p><strong>DNI:</strong> 23456701L</p>
+                    <p><strong>Teléfono:</strong> 623 456 701</p>
+                    <p><strong>Fecha inicio:</strong> 05/04/2025</p>
+                    <p><strong>Fecha fin:</strong> 12/04/2025</p>
+                </div>
+                <p class="vehiculo-precio">80€/día (7 días)</p>
+                
+            </div>
+        </div>
+
+        <div class="paginacion">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="siguiente">Siguiente &raquo;</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="seccion-footer">
+        <h3>Rent a Car</h3>
+        <p>Tu mejor opción para alquilar vehículos en cualquier ocasión.</p>
+    </div>
+    <div class="seccion-footer">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="empresa.html">Nuestra Empresa</a></li>
+            <li><a href="vehiculos-disponibles.html">Vehículos Disponibles</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+    <div class="seccion-footer">
+        <h3>Contacto</h3>
+        <p>Calle Principal 123, Ciudad</p>
+        <p>+34 912 345 678</p>
+        <p>info@rentacar.com</p>
+    </div>
+</footer>
+</body>
+</html>
