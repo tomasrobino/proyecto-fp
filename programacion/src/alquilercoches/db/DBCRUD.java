@@ -120,4 +120,60 @@ public abstract class DBCRUD {
         return lista;
     }
 
+    public static void updateVehiculo(int id, Vehiculo v) {
+        String sqlUpdateVehiculo = "UPDATE vehiculos SET tipo=?, subtipo=?, precio=?, fabricacion=?, aptitud=? WHERE id=?";
+        String sqlEliminarMantenimientos = "DELETE FROM mantenimientos WHERE vehiculo_id=?";
+        String sqlAgregarMantenimientos = "INSERT INTO mantenimientos (vehiculo_id, fecha) VALUES (?, ?)";
+
+        try (Connection conn = DBConexion.conectar()) {
+            conn.setAutoCommit(false);
+
+            String tipo, subtipo = null;
+
+            if (v instanceof Furgoneta f) {
+                tipo = "furgoneta";
+                subtipo = f.getTipo().name();
+            } else if (v instanceof Turismo t) {
+                tipo = "turismo";
+                subtipo = t.getTipo().name();
+            } else if (v instanceof Motocicleta) {
+                tipo = "motocicleta";
+            } else {
+                throw new IllegalArgumentException("Tipo no reconocido");
+            }
+
+            v.calcularMantenimiento();
+
+            try (PreparedStatement stmt = conn.prepareStatement(sqlUpdateVehiculo)) {
+                stmt.setString(1, tipo);
+                stmt.setString(2, subtipo);
+                stmt.setDouble(3, v.getPrecio());
+                stmt.setDate(4, new java.sql.Date(v.getFabricacion().getTime()));
+                stmt.setInt(5, v.getAptitud());
+                stmt.setInt(6, id);
+                stmt.executeUpdate();
+            }
+
+            // eliminar + agregar mantenimientos
+            try (PreparedStatement dStmt = conn.prepareStatement(sqlEliminarMantenimientos)) {
+                dStmt.setInt(1, id);
+                dStmt.executeUpdate();
+            }
+
+            try (PreparedStatement iStmt = conn.prepareStatement(sqlAgregarMantenimientos)) {
+                for (Date fecha : v.getMantenimientos()) {
+                    iStmt.setInt(1, id);
+                    iStmt.setDate(2, new java.sql.Date(fecha.getTime()));
+                    iStmt.addBatch();
+                }
+                iStmt.executeBatch();
+            }
+
+            conn.commit();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
