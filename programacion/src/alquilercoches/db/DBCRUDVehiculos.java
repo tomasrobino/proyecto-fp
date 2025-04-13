@@ -176,4 +176,18 @@ public abstract class DBCRUDVehiculos {
         }
     }
 
+    public static void deleteVehiculo(int id) {
+        String sql = "DELETE FROM vehiculos WHERE id = ?";
+
+        try (Connection conn = DBConexion.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
