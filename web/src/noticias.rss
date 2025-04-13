@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Rent a Car - Noticias</title>
+    <link>https://www.rentacar.com</link>
+    <description>Últimas novedades y noticias de Rent a Car</description>
+    <language>es-es</language>
+    <pubDate>Fri, 15 Mar 2024 09:00:00 +0000</pubDate>
+
+    <item>
+      <title>Nuevos modelos eléctricos en nuestra flota</title>
+      <description>Hemos incorporado 10 nuevos vehículos eléctricos a nuestra flota para ofrecer opciones más sostenibles a nuestros clientes.</description>
+      <link>https://www.rentacar.com/noticias/nuevos-modelos-electricos</link>
+      <pubDate>Fri, 15 Mar 2024 09:00:00 +0000</pubDate>
+      <guid>https://www.rentacar.com/noticias/nuevos-modelos-electricos</guid>
+    </item>
+
+    <item>
+      <title>Apertura de nueva oficina en Valencia</title>
+      <description>Nos complace anunciar la apertura de nuestra nueva oficina en Valencia, ampliando nuestra cobertura nacional.</description>
+      <link>https://www.rentacar.com/noticias/apertura-oficina-valencia</link>
+      <pubDate>Fri, 08 Mar 2024 10:30:00 +0000</pubDate>
+      <guid>https://www.rentacar.com/noticias/apertura-oficina-valencia</guid>
+    </item>
+
+    <item>
+      <title>Oferta especial de primavera</title>
+      <description>Descuentos especiales en alquileres de larga duración durante toda la temporada de primavera. ¡No te lo pierdas!</description>
+      <link>https://www.rentacar.com/noticias/oferta-especial-primavera</link>
+      <pubDate>Fri, 01 Mar 2024 08:15:00 +0000</pubDate>
+      <guid>https://www.rentacar.com/noticias/oferta-especial-primavera</guid>
+    </item>
+
+    <item>
+      <title>Renovación de nuestra flota de furgonetas</title>
+      <description>Hemos renovado completamente nuestra flota de furgonetas con modelos más eficientes y espaciosos.</description>
+      <link>https://www.rentacar.com/noticias/renovacion-flota-furgonetas</link>
+      <pubDate>Fri, 22 Feb 2024 11:00:00 +0000</pubDate>
+      <guid>https://www.rentacar.com/noticias/renovacion-flota-furgonetas</guid>
+    </item>
+
+    <item>
+      <title>Nueva aplicación móvil para gestionar tus reservas</title>
+      <description>Lanzamos nuestra nueva aplicación móvil que facilita la reserva y gestión de tus alquileres desde tu smartphone.</description>
+      <link>https://www.rentacar.com/noticias/nueva-aplicacion-movil</link>
+      <pubDate>Fri, 15 Feb 2024 12:45:00 +0000</pubDate>
+      <guid>https://www.rentacar.com/noticias/nueva-aplicacion-movil</guid>
+    </item>
+  </channel>
+</rss>
