@@ -1,6 +1,6 @@
 package alquilercoches.personal;
 
-import alquilercoches.Cliente;
+import alquilercoches.negocio.Cliente;
 import alquilercoches.db.DBCRUDClientes;
 
 import java.util.List;

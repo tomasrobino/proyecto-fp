@@ -1,6 +1,6 @@
 package alquilercoches.db;
 
-import alquilercoches.Cliente;
+import alquilercoches.negocio.Cliente;
 
 import java.sql.*;
 import java.util.*;

@@ -1,4 +1,4 @@
-package alquilercoches;
+package alquilercoches.negocio;
 
 public class Cliente {
     private String telefono;
