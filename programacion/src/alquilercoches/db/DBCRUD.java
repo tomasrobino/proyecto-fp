@@ -1,12 +1,16 @@
 package alquilercoches.db;
 
+import alquilercoches.TipoFurgoneta;
+import alquilercoches.TipoTurismo;
 import alquilercoches.vehiculos.Furgoneta;
 import alquilercoches.vehiculos.Motocicleta;
 import alquilercoches.vehiculos.Turismo;
 import alquilercoches.vehiculos.Vehiculo;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public abstract class DBCRUD {
     public static void insertVehiculo(Vehiculo v) {
@@ -64,5 +68,56 @@ public abstract class DBCRUD {
     }
 
 
-    
+    public static List<Vehiculo> getVehiculos() {
+        ArrayList<Vehiculo> lista = new ArrayList<>();
+        String sqlVehiculos = "SELECT * FROM vehiculos";
+        String sqlMantenimientos = "SELECT fecha FROM mantenimientos WHERE vehiculo_id = ? ORDER BY fecha";
+
+        try (Connection conn = DBConexion.conectar();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sqlVehiculos)) {
+
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String tipo = rs.getString("tipo");
+                String subtipo = rs.getString("subtipo");
+                double precio = rs.getDouble("precio");
+                Date fabricacion = rs.getDate("fabricacion");
+
+                Vehiculo v;
+                switch (tipo) {
+                    case "furgoneta":
+                        v = new Furgoneta(TipoFurgoneta.valueOf(subtipo), precio, fabricacion);
+                        break;
+                    case "turismo":
+                        v = new Turismo(TipoTurismo.valueOf(subtipo), precio, fabricacion);
+                        break;
+                    case "motocicleta":
+                        v = new Motocicleta(precio, fabricacion);
+                        break;
+                    default:
+                        continue;
+                }
+
+                // Cargar mantenimientos
+                try (PreparedStatement mStmt = conn.prepareStatement(sqlMantenimientos)) {
+                    mStmt.setInt(1, id);
+                    ResultSet mRs = mStmt.executeQuery();
+                    while (mRs.next()) {
+                        v.getMantenimientos().add(mRs.getDate("fecha"));
+                    }
+                }
+
+                v.calcularMantenimiento(); // actualiza aptitud
+
+                lista.add(v);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return lista;
+    }
+
 }
