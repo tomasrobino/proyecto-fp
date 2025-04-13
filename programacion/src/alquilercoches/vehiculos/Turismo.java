@@ -7,10 +7,13 @@ import java.util.Date;
 public class Turismo extends Vehiculo {
     private TipoTurismo tipo;
 
-    public Turismo(TipoTurismo tipo, double precio, Date fabricacion) {
+    public Turismo(TipoTurismo tipo, double precio, Date fabricacion, String matricula, String marca, String modelo) {
         this.tipo = tipo;
         this.precio = precio;
         this.fabricacion = fabricacion;
+        this.matricula = matricula;
+        this.marca = marca;
+        this.modelo = modelo;
     }
 
     @Override

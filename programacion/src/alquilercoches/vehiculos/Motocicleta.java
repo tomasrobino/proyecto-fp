@@ -3,9 +3,12 @@ package alquilercoches.vehiculos;
 import java.util.Date;
 
 public class Motocicleta extends Vehiculo {
-    public Motocicleta(double precio, Date fabricacion) {
+    public Motocicleta(double precio, Date fabricacion, String matricula, String marca, String modelo) {
         this.precio = precio;
         this.fabricacion = fabricacion;
+        this.matricula = matricula;
+        this.marca = marca;
+        this.modelo = modelo;
     }
 
     @Override
