@@ -9,6 +9,9 @@ public abstract class Vehiculo {
     final ArrayList<Date> mantenimientos = new ArrayList<>();
     Date fabricacion;
     int aptitud;
+    String matricula;
+    String marca;
+    String modelo;
 
     public abstract void calcularMantenimiento();
 
@@ -42,5 +45,29 @@ public abstract class Vehiculo {
 
     public void setAptitud(int aptitud) {
         this.aptitud = aptitud;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 }
