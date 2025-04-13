@@ -14,7 +14,7 @@ import java.util.List;
 
 public abstract class DBCRUDVehiculos {
     public static void insertVehiculo(Vehiculo v) {
-        String sqlVehiculo = "INSERT INTO vehiculos (tipo, subtipo, precio, fabricacion, aptitud) VALUES (?, ?, ?, ?, ?)";
+        String sqlVehiculo = "INSERT INTO vehiculos (tipo, subtipo, precio, fabricacion, aptitud, matricula, marca, modelo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         String sqlMantenimiento = "INSERT INTO mantenimientos (vehiculo_id, fecha) VALUES (?, ?)";
 
         try (Connection conn = DBConexion.conectar()) {
@@ -43,6 +43,9 @@ public abstract class DBCRUDVehiculos {
                 stmt.setDouble(3, v.getPrecio());
                 stmt.setDate(4, new java.sql.Date(v.getFabricacion().getTime()));
                 stmt.setInt(5, v.getAptitud());
+                stmt.setString(6, v.getMatricula());
+                stmt.setString(7, v.getMarca());
+                stmt.setString(8, v.getModelo());
                 stmt.executeUpdate();
 
                 ResultSet keys = stmt.getGeneratedKeys();
@@ -83,17 +86,20 @@ public abstract class DBCRUDVehiculos {
                 String subtipo = rs.getString("subtipo");
                 double precio = rs.getDouble("precio");
                 Date fabricacion = rs.getDate("fabricacion");
+                String matricula = rs.getString("matricula");
+                String marca = rs.getString("marca");
+                String modelo = rs.getString("modelo");
 
                 Vehiculo v;
                 switch (tipo) {
                     case "furgoneta":
-                        v = new Furgoneta(TipoFurgoneta.valueOf(subtipo), precio, fabricacion);
+                        v = new Furgoneta(TipoFurgoneta.valueOf(subtipo), precio, fabricacion, matricula, marca, modelo);
                         break;
                     case "turismo":
-                        v = new Turismo(TipoTurismo.valueOf(subtipo), precio, fabricacion);
+                        v = new Turismo(TipoTurismo.valueOf(subtipo), precio, fabricacion, matricula, marca, modelo);
                         break;
                     case "motocicleta":
-                        v = new Motocicleta(precio, fabricacion);
+                        v = new Motocicleta(precio, fabricacion, matricula, marca, modelo);
                         break;
                     default:
                         continue;
@@ -121,7 +127,7 @@ public abstract class DBCRUDVehiculos {
     }
 
     public static void updateVehiculo(int id, Vehiculo v) {
-        String sqlUpdateVehiculo = "UPDATE vehiculos SET tipo=?, subtipo=?, precio=?, fabricacion=?, aptitud=? WHERE id=?";
+        String sqlUpdateVehiculo = "UPDATE vehiculos SET tipo=?, subtipo=?, precio=?, fabricacion=?, aptitud=?, matricula=?, marca=?, modelo=? WHERE id=?";
         String sqlEliminarMantenimientos = "DELETE FROM mantenimientos WHERE vehiculo_id=?";
         String sqlAgregarMantenimientos = "INSERT INTO mantenimientos (vehiculo_id, fecha) VALUES (?, ?)";
 
@@ -150,7 +156,10 @@ public abstract class DBCRUDVehiculos {
                 stmt.setDouble(3, v.getPrecio());
                 stmt.setDate(4, new java.sql.Date(v.getFabricacion().getTime()));
                 stmt.setInt(5, v.getAptitud());
-                stmt.setInt(6, id);
+                stmt.setString(6, v.getMatricula());
+                stmt.setString(7, v.getMarca());
+                stmt.setString(8, v.getModelo());
+                stmt.setInt(9, id);
                 stmt.executeUpdate();
             }
 
