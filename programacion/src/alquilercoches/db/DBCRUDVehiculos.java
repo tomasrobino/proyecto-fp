@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public abstract class DBCRUD {
+public abstract class DBCRUDVehiculos {
     public static void insertVehiculo(Vehiculo v) {
         String sqlVehiculo = "INSERT INTO vehiculos (tipo, subtipo, precio, fabricacion, aptitud) VALUES (?, ?, ?, ?, ?)";
         String sqlMantenimiento = "INSERT INTO mantenimientos (vehiculo_id, fecha) VALUES (?, ?)";
