@@ -10,7 +10,7 @@ public abstract class Vehiculo {
     Date fabricacion;
     int aptitud;
 
-    abstract void calcularMantenimiento();
+    public abstract void calcularMantenimiento();
 
     public long getTiempoAmarillo() {
         return tiempoAmarillo;
