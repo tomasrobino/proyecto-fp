@@ -190,4 +190,21 @@ public abstract class DBCRUDVehiculos {
         }
     }
 
+    public static void insertarMantenimiento(int idVehiculo, Date fecha) {
+        String sql = "INSERT INTO mantenimientos (vehiculo_id, fecha) VALUES (?, ?)";
+
+        try (Connection conn = DBConexion.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, idVehiculo);
+            stmt.setDate(2, new java.sql.Date(fecha.getTime()));
+            stmt.executeUpdate();
+
+            System.out.println("Mantenimiento agregado para vehículo ID " + idVehiculo);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
