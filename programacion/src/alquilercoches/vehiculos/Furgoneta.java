@@ -30,4 +30,12 @@ public class Furgoneta extends Vehiculo {
             } else aptitud = 2;
         }
     }
+
+    public TipoFurgoneta getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoFurgoneta tipo) {
+        this.tipo = tipo;
+    }
 }

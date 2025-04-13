@@ -32,4 +32,12 @@ public class Turismo extends Vehiculo {
             } else aptitud = 2;
         }
     }
+
+    public TipoTurismo getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoTurismo tipo) {
+        this.tipo = tipo;
+    }
 }
