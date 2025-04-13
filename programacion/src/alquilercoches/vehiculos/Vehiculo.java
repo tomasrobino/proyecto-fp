@@ -1,11 +1,12 @@
 package alquilercoches.vehiculos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public abstract class Vehiculo {
     final long tiempoAmarillo = 2629800000L; //milisegundos en un mes
     double precio;
-    Date fechaMantenimiento;
+    final ArrayList<Date> mantenimientos = new ArrayList<>();
     Date fabricacion;
     int aptitud;
 
@@ -23,12 +24,8 @@ public abstract class Vehiculo {
         this.precio = precio;
     }
 
-    public Date getFechaMantenimiento() {
-        return fechaMantenimiento;
-    }
-
-    public void setFechaMantenimiento(Date fechaMantenimiento) {
-        this.fechaMantenimiento = fechaMantenimiento;
+    public ArrayList<Date> getMantenimientos() {
+        return mantenimientos;
     }
 
     public Date getFabricacion() {

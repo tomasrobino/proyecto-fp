@@ -17,15 +17,15 @@ public class Furgoneta extends Vehiculo {
     public void calcularMantenimiento() {
         Date hoy = new Date();
         if (hoy.getTime()-fabricacion.getTime() < 63115200000L) {
-            if (hoy.getTime()-fechaMantenimiento.getTime() > 31557600000L) {
+            if (hoy.getTime()- mantenimientos.get(mantenimientos.size()-1).getTime() > 31557600000L) {
                 aptitud = 0;
-            } else if (hoy.getTime()-fechaMantenimiento.getTime() > 31557600000L - tiempoAmarillo) {
+            } else if (hoy.getTime()- mantenimientos.get(mantenimientos.size()-1).getTime() > 31557600000L - tiempoAmarillo) {
                 aptitud = 1;
             } else aptitud = 2;
         } else {
-            if (hoy.getTime()-fechaMantenimiento.getTime() > 15778800000L) {
+            if (hoy.getTime()- mantenimientos.get(mantenimientos.size()-1).getTime() > 15778800000L) {
                 aptitud = 0;
-            } else if (hoy.getTime()-fechaMantenimiento.getTime() > 15778800000L - tiempoAmarillo) {
+            } else if (hoy.getTime()- mantenimientos.get(mantenimientos.size()-1).getTime() > 15778800000L - tiempoAmarillo) {
                 aptitud = 1;
             } else aptitud = 2;
         }
