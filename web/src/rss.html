@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehículos Disponibles - Rent a Car</title>
+    <title>Novedades - Rent a Car</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="lecturarss.js"></script>
 </head>
 <body>
 <header>
@@ -16,14 +17,35 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="empresa.html">Nuestra Empresa</a></li>
-                <li><a href="vehiculos-disponibles.html" class="active">Vehículos Disponibles</a></li>
+                <li><a href="vehiculos-disponibles.html">Vehículos Disponibles</a></li>
                 <li><a href="vehiculos-alquilados.html">Vehículos Alquilados</a></li>
-                <li><a href="rss.html">Novedades</a></li>
+                <li><a href="rss.html" class="active">Novedades</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </div>
 </header>
+
+<div class="titulo">
+    <div class="div">
+        <h2>Últimas Novedades</h2>
+    </div>
+</div>
+
+<main class="seccion">
+    <div class="div">
+        <div class="rss-info">
+            <h3>Suscríbete a nuestras novedades</h3>
+            <p>Mantente informado sobre nuestras últimas noticias, ofertas especiales y adquisiciones de vehículos nuevos.</p>
+            <a href="noticias.rss" class="btn">
+                <i class="fas fa-rss"></i> Suscribirse al RSS
+            </a>
+        </div>
+
+        <!-- Contenedor vacío que se llenará dinámicamente con los items del RSS -->
+        <div class="grupo-tarjetas"></div>
+    </div>
+</main>
 
 <footer>
     <div class="seccion-footer">

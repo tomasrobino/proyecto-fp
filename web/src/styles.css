@@ -115,6 +115,7 @@ nav ul li a.active::after {
     font-weight: 600;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -303,15 +304,71 @@ nav ul li a.active::after {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.tarjeta i {
-    font-size: 40px;
-    color: #ff6b00;
-    margin-bottom: 20px;
-}
-
 .tarjeta h3 {
     font-size: 22px;
     margin-bottom: 15px;
+}
+
+.contacto-tarjeta > * {
+    width: fit-content;
+}
+
+.contacto-tarjeta {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 20%;
+    height: fit-content;
+    margin: 5px;
+    background-color: #fff;
+}
+
+/* Estilos para el formulario de contacto */
+.form-grupo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-campo {
+    flex: 1;
+    min-width: 250px;
+}
+
+.form-campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-campo input,
+.form-campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.form-campo textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-check {
+    margin-bottom: 20px;
+}
+
+.form-check input {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.form-check label {
+    vertical-align: middle;
 }
 
 /* Footer */
@@ -546,4 +603,28 @@ footer {
 
 .paginacion a.siguiente {
     padding: 8px 15px;
+}
+
+
+/* página de noticias */
+.noticia-fecha {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+.noticia-fecha .dia {
+    font-weight: bold;
+    margin-right: 5px;
+}
+.noticia-fecha .mes,
+.noticia-fecha .anio {
+    margin-right: 5px;
+}
+
+.noticia-contenido h3 {
+    margin-bottom: 10px;
+}
+
+.noticia-contenido p {
+    margin-bottom: 15px;
 }

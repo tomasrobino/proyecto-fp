@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehículos Disponibles - Rent a Car</title>
+    <title>Contacto - Rent a Car</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,14 +16,110 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="empresa.html">Nuestra Empresa</a></li>
-                <li><a href="vehiculos-disponibles.html" class="active">Vehículos Disponibles</a></li>
+                <li><a href="vehiculos-disponibles.html">Vehículos Disponibles</a></li>
                 <li><a href="vehiculos-alquilados.html">Vehículos Alquilados</a></li>
                 <li><a href="rss.html">Novedades</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
             </ul>
         </nav>
     </div>
 </header>
+
+<div class="titulo">
+    <div class="div">
+        <h2>Contacto</h2>
+        <p>Estamos aquí para ayudarte. Contáctanos en cualquier momento.</p>
+    </div>
+</div>
+
+<section class="seccion">
+    <div class="div">
+        <h2>Información de Contacto</h2>
+        <div class="grupo-tarjetas">
+            <div class="tarjeta contacto-tarjeta">
+                <h3>Dirección</h3>
+                <p>Calle Principal 123</p>
+                <p>28001 Madrid, España</p>
+            </div>
+
+            <div class="tarjeta contacto-tarjeta">
+                <h3>Teléfono</h3>
+                <p>+34 912 345 678</p>
+                <p>+34 600 123 456</p>
+            </div>
+
+            <div class="tarjeta contacto-tarjeta">
+                <h3>Email</h3>
+                <p>info@rentacar.com</p>
+                <p>reservas@rentacar.com</p>
+            </div>
+
+            <div class="tarjeta contacto-tarjeta">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 9:00 - 20:00</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="seccion">
+    <div class="div">
+        <h2>Nuestra Ubicación</h2>
+        <div class="grupo-tarjetas">
+            <iframe
+                    width="60%"
+                    height="400"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.8836323022842408%2C41.65260932903053%2C-0.8811217546463014%2C41.65390798233183&amp;layer=mapnik"></iframe>
+        </div>
+    </div>
+</section>
+
+<section class="seccion">
+    <div class="div">
+        <h2>Envíanos un mensaje</h2>
+        <div class="tarjeta">
+            <form action="" method="post" class="form">
+                <div class="form-grupo">
+                    <div class="form-campo">
+                        <label for="nombre">Nombre completo*</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="form-campo">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" placeholder="tu.email@ejemplo.com" required>
+                    </div>
+                </div>
+
+                <div class="form-grupo">
+                    <div class="form-campo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono">
+                    </div>
+
+                    <div class="form-campo">
+                        <label for="asunto">Asunto*</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="Asunto de tu mensaje" required>
+                    </div>
+                </div>
+
+                <div class="form-campo">
+                    <label for="mensaje">Mensaje*</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="politica" name="politica" required>
+                    <label for="politica">He leído y acepto la política de privacidad*</label>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn">Enviar mensaje</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
 
 <footer>
     <div class="seccion-footer">
