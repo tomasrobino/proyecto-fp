@@ -217,6 +217,7 @@ public abstract class DBCRUDVehiculos {
     }
 
     public static Integer getId(String matricula) {
+        Integer id = null;
         String sql = "SELECT id FROM vehiculos WHERE matricula = ?";
 
         try (Connection conn = DBConexion.conectar();
@@ -226,10 +227,11 @@ public abstract class DBCRUDVehiculos {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                return rs.getInt("id");
-            } else return null;
+                id = rs.getInt("id");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return id;
     }
 }
