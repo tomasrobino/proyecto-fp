@@ -51,8 +51,18 @@ public abstract class JSON {
                 }
                 fileWriter.write("    \"precio\": " + v.getPrecio() + ",\n");
                 fileWriter.write("    \"fabricacion\": \"" + FORMATO_FECHA.format(v.getFabricacion()) + "\",\n");
-                fileWriter.write("    \"mantenimientos\": \"" + FORMATO_FECHA.format(v.getMantenimientos()) + "\"\n");
-                fileWriter.write("    \"apto\": \"" + v.getAptitud() + "\"\n");
+                fileWriter.write("    \"mantenimientos\": [\n");
+                for (int j = 0; j < v.getMantenimientos().size(); j++) {
+                    fileWriter.write("        \"" + FORMATO_FECHA.format(v.getMantenimientos().get(j)) + "\"");
+
+                    if (j < v.getMantenimientos().size() - 1) {
+                        fileWriter.write(",\n");
+                    } else {
+                        fileWriter.write("\n");
+                    }
+                }
+                fileWriter.write("    ],\n");
+                fileWriter.write("    \"apto\": \"" + v.getAptitud() + "\",\n");
                 fileWriter.write("    \"alquilado\": \"" + v.isAlquilado() + "\"\n");
                 if (v.isAlquilado()) {
                     Optional<Alquiler> alquiler = alquileres.stream().filter(a -> v.getMatricula().equals(a.getMatricula())).findFirst();

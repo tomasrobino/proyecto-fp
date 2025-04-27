@@ -8,6 +8,8 @@ import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import static alquilercoches.json.JSON.generarJSON;
+
 public class AlquilerCochesApp extends Application {
 
     private Stage primaryStage;
@@ -86,8 +88,13 @@ public class AlquilerCochesApp extends Application {
 
         // Menú Sistema
         Menu sistemaMenu = new Menu("Sistema");
+        MenuItem generarJSON = new MenuItem("Generar JSON");
         MenuItem logoutItem = new MenuItem("Cerrar Sesión");
         MenuItem exitItem = new MenuItem("Salir");
+
+        generarJSON.setOnAction(e -> {
+            generarJSON();
+        });
 
         logoutItem.setOnAction(e -> {
             // Reinicia la aplicación (se volverá a solicitar el login)
@@ -97,7 +104,7 @@ public class AlquilerCochesApp extends Application {
         });
 
         exitItem.setOnAction(e -> primaryStage.close());
-        sistemaMenu.getItems().addAll(logoutItem, new SeparatorMenuItem(), exitItem);
+        sistemaMenu.getItems().addAll(generarJSON, logoutItem, exitItem);
 
         // Menú Ayuda
         Menu ayudaMenu = new Menu("Ayuda");
