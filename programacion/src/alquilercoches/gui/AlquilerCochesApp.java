@@ -83,7 +83,7 @@ public class AlquilerCochesApp extends Application {
         primaryStage.setScene(scene);
     }
 
-    private MenuBar crearMenuSuperior() {
+    MenuBar crearMenuSuperior() {
         MenuBar menuBar = new MenuBar();
 
         // Menú Sistema
