@@ -28,6 +28,7 @@ public class VehiculosController {
     private TextField matriculaField, marcaField, modeloField, precioField, fabricacionField;
     private BorderPane view;
     private final SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+    private MantenimientoController mantenimientoController;
 
     public VehiculosController(Administrador admin) {
         this.admin = admin;
@@ -208,6 +209,7 @@ public class VehiculosController {
                         guardarVehiculo(vehiculo);
                         cargarVehiculos();
                         limpiarFormulario();
+                        actualizarMantenimiento();
                     }
                 } catch (ParseException ex) {
                     Util.mostrarAlerta("Error", "Formato de fecha incorrecto. Use dd/mm/aaaa.");
@@ -225,6 +227,7 @@ public class VehiculosController {
                 alert.setContentText("¿Está seguro de eliminar el vehículo con matrícula " + seleccionado.getMatricula() + "?");
                 if (alert.showAndWait().filter(response -> response == ButtonType.OK).isPresent()) {
                     admin.eliminarVehiculo(seleccionado.getMatricula());
+                    actualizarMantenimiento();
                     cargarVehiculos();
                     limpiarFormulario();
                 }
@@ -353,5 +356,14 @@ public class VehiculosController {
     // Permite acceder a la tabla para refrescar la vista en otros paneles (por ejemplo, en mantenimiento)
     public TableView<Vehiculo> getTablaVehiculos() {
         return tablaVehiculos;
+    }
+
+    private void actualizarMantenimiento() {
+        mantenimientoController.getTablaMantenimiento().setItems(tablaVehiculos.getItems());
+        mantenimientoController.getTablaMantenimiento().refresh();
+    }
+
+    public void setMantenimientoController(MantenimientoController mantenimientoController) {
+        this.mantenimientoController = mantenimientoController;
     }
 }

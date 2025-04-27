@@ -71,6 +71,7 @@ public class AlquilerCochesApp extends Application {
             MantenimientoController mantenimientoController = new MantenimientoController(adminActual, vehiculosController);
             Tab mantenimientoTab = new Tab("Mantenimiento", mantenimientoController.getView());
             mantenimientoTab.setClosable(false);
+            vehiculosController.setMantenimientoController(mantenimientoController);
 
             tabPane.getTabs().addAll(vehiculosTab, mantenimientoTab);
         }

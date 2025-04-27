@@ -181,4 +181,8 @@ public class MantenimientoController {
     public BorderPane getView() {
         return view;
     }
+
+    public TableView<Vehiculo> getTablaMantenimiento() {
+        return tablaMantenimiento;
+    }
 }
