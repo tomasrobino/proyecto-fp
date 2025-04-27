@@ -1,0 +1,1 @@
+como las tarjetas se cargan dinámicamente, puse un par de ejemplo
