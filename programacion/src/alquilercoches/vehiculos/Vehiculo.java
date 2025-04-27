@@ -12,6 +12,9 @@ public abstract class Vehiculo {
     String matricula;
     String marca;
     String modelo;
+    boolean alquilado = false;
+    Date inicioAlquiler;
+    Date finAlquiler;
 
     public abstract void calcularMantenimiento();
 
@@ -69,5 +72,23 @@ public abstract class Vehiculo {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+
+    public boolean isAlquilado() {
+        return alquilado;
+    }
+
+    public void setAlquiler(Date inicioAlquiler, Date finAlquiler) {
+        this.alquilado = true;
+        this.inicioAlquiler = inicioAlquiler;
+        this.finAlquiler = finAlquiler;
+    }
+
+    public Date getInicioAlquiler() {
+        return inicioAlquiler;
+    }
+
+    public Date getFinAlquiler() {
+        return finAlquiler;
     }
 }
