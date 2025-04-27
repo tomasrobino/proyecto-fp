@@ -5,7 +5,7 @@ import alquilercoches.negocio.Cliente;
 import java.sql.*;
 import java.util.*;
 
-public class DBCRUDClientes {
+public abstract class DBCRUDClientes {
 
     public static void insertarCliente(Cliente c) {
         String sql = "INSERT INTO clientes (dni, nombre, direccion, telefono, email) VALUES (?, ?, ?, ?, ?)";

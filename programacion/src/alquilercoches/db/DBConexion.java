@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBConexion {
+public abstract class DBConexion {
     /*
         No registro el driver de MariaDB porque:
         "This registers the driver with DriverManager, though in modern JDBC (Java 6+), this is often optional due to autoloading."

@@ -5,7 +5,7 @@ import alquilercoches.negocio.Alquiler;
 import java.sql.*;
 import java.util.*;
 
-public class DBCRUDAlquileres {
+public abstract class DBCRUDAlquileres {
 
     // Insertar un nuevo alquiler
     public static void insertarAlquiler(Alquiler a) {
