@@ -49,11 +49,18 @@ public class AlquilerCochesApp extends Application {
 
         TabPane tabPane = new TabPane();
 
+        // Panel de gestión de alquileres
+        AlquileresController alquileresController = new AlquileresController(usuarioActual);
+        Tab alquileresTab = new Tab("Gestión de Alquileres", alquileresController.getView());
+        alquileresTab.setClosable(false);
+        tabPane.getTabs().add(alquileresTab);
+
         // Panel de gestión de clientes
         ClientesController clientesController = new ClientesController(usuarioActual);
         Tab clientesTab = new Tab("Gestión de Clientes", clientesController.getView());
         clientesTab.setClosable(false);
         tabPane.getTabs().add(clientesTab);
+
 
         // Paneles adicionales solo para administradores
         if (esAdmin) {
