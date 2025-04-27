@@ -133,7 +133,11 @@ public class MantenimientoController {
                     try {
                         Date fecha = dateFormat.parse(fechaStr);
                         admin.insertarMantenimiento(seleccionado.getMatricula(), fecha);
+                        List<Vehiculo> vehiculosActualizados = admin.getVehiculos();
+                        ObservableList<Vehiculo> nuevaLista = FXCollections.observableArrayList(vehiculosActualizados);
+                        vehiculosController.getTablaVehiculos().setItems(nuevaLista);
                         tablaMantenimiento.setItems(vehiculosController.getTablaVehiculos().getItems());
+                        tablaMantenimiento.refresh();
                         Util.mostrarAlerta("Información", "Mantenimiento registrado para " + seleccionado.getMatricula());
                     } catch (ParseException ex) {
                         Util.mostrarAlerta("Error", "La fecha debe tener el formato dd/MM/yyyy.");

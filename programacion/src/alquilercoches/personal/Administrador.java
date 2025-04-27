@@ -4,6 +4,7 @@ import alquilercoches.db.DBCRUDVehiculos;
 import alquilercoches.vehiculos.Vehiculo;
 
 import java.util.Date;
+import java.util.List;
 
 public class Administrador extends Empleado {
     public Administrador(String dni, String nombre) {
@@ -33,5 +34,9 @@ public class Administrador extends Empleado {
         if (id != null) {
             DBCRUDVehiculos.insertarMantenimiento(id, fecha);
         }
+    }
+
+    public List<Vehiculo> getVehiculos() {
+        return DBCRUDVehiculos.getVehiculos();
     }
 }
