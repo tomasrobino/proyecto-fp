@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Recorrer cada vehículo y crear una tarjeta para cada uno
             data.forEach(vehiculo => {
-                if (vehiculo.alquilado===false) {
+                if (vehiculo.alquilado===true) {
                     // Crear el elemento tarjeta
                     const tarjeta = document.createElement('div');
                     tarjeta.classList.add('tarjeta', 'vehiculo-card');
@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p class="vehiculo-tipo">${vehiculo.tipo} ${vehiculo.subtipo ? '- ' + vehiculo.subtipo : ''}</p>
                     <div class="vehiculo-detalles">
                         <p><strong>Precio:</strong> Desde ${vehiculo.precio}€/día</p>
+                        <p><strong>Alquilado por:</strong>{vehiculo.cliente}</p>
                     </div
                     `;
 
