@@ -12,7 +12,7 @@ public class DBConexion {
      */
 
 
-    private static final String URL = "jdbc:mariadb://localhost:3306";
+    private static final String URL = "jdbc:mariadb://localhost:3306/schema_name";
     private static final String USUARIO = "root";
     private static final String CONTRASENIA = "password";
 
