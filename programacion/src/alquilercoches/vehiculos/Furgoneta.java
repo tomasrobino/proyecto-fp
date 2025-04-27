@@ -14,6 +14,10 @@ public class Furgoneta extends Vehiculo {
         this.matricula = matricula;
         this.marca = marca;
         this.modelo = modelo;
+
+        if (mantenimientos.isEmpty()) {
+            mantenimientos.add(0, fabricacion);
+        }
     }
 
     @Override
