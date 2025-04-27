@@ -1,0 +1,95 @@
+[
+  {
+    "matricula": "gtrgtrg",
+    "modelo": "gtrgtr",
+    "marca": "gtrg",
+    "tipo": "motocicleta",
+    "precio": 654.5,
+    "fabricacion": "2019-04-03",
+    "mantenimientos": [
+        "2019-04-03",
+        "2025-01-01"
+    ],
+    "apto": "2",
+    "alquilado": "false"
+  },
+  {
+    "matricula": "gre",
+    "modelo": "ergre",
+    "marca": "gerg",
+    "tipo": "turismo",
+    "subtipo": "PEQUENO",
+    "precio": 5.4,
+    "fabricacion": "2000-12-12",
+    "mantenimientos": [
+        "2000-12-12",
+        "2024-01-01",
+        "2025-01-01"
+    ],
+    "apto": "2",
+    "alquilado": "false"
+  },
+  {
+    "matricula": "55546564",
+    "modelo": "gtrgtr",
+    "marca": "gtrg",
+    "tipo": "motocicleta",
+    "precio": 6.5,
+    "fabricacion": "2019-04-03",
+    "mantenimientos": [
+        "2019-04-03",
+        "2019-04-03",
+        "2025-04-27"
+    ],
+    "apto": "2",
+    "alquilado": "false"
+  },
+  {
+    "matricula": "555",
+    "modelo": "456",
+    "marca": "123",
+    "tipo": "turismo",
+    "subtipo": "MEDIANO",
+    "precio": 6.6,
+    "fabricacion": "2005-01-01",
+    "mantenimientos": [
+        "2005-01-01",
+        "2005-01-01",
+        "2025-04-27"
+    ],
+    "apto": "2",
+    "alquilado": "false"
+  },
+  {
+    "matricula": "fdsf",
+    "modelo": "sdfds",
+    "marca": "sdfsdf",
+    "tipo": "furgoneta",
+    "subtipo": "GRAN_CARGA",
+    "precio": 4.3,
+    "fabricacion": "2010-01-01",
+    "mantenimientos": [
+        "2010-01-01",
+        "2010-01-01",
+        "2025-04-27"
+    ],
+    "apto": "2",
+    "alquilado": "false"
+  },
+  {
+    "matricula": "htr",
+    "modelo": "htrh",
+    "marca": "htr",
+    "tipo": "turismo",
+    "subtipo": "PEQUENO",
+    "precio": 43.3,
+    "fabricacion": "2002-01-01",
+    "mantenimientos": [
+        "2002-01-01",
+        "2002-01-01",
+        "2025-04-27"
+    ],
+    "apto": "2",
+    "alquilado": "false"
+  }
+]

@@ -12,7 +12,15 @@ para comprobar que funcione
 
 document.addEventListener('DOMContentLoaded', function() {
     // Obtiene el RSS de noticias
-    fetch('noticias.rss')
+    //La URL debería ser reemplazada por la del servidor
+    fetch('../rss/noticias.rss', {
+        //Headers para CORS. En un navegador moderno no hay realmente manera de evitar usar un servidor local
+        //porque mode: no-cors no permite cargar el contenido
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/rss+xml'
+        }
+    })
         .then(res => res.text())
         .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
         .then(data => {

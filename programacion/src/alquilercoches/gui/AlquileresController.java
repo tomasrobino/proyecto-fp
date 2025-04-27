@@ -161,20 +161,11 @@ public class AlquileresController {
     }
 
     private void guardarAlquiler(Alquiler alquiler) {
-        if (usuario != null) {
-            Alquiler existente = usuario.buscarAlquiler(alquiler.getMatricula());
-            if (existente != null) {
-                usuario.actualizarAlquiler(alquiler);
-            } else {
-                usuario.insertarAlquiler(alquiler);
-            }
+        Alquiler existente = DBCRUDAlquileres.buscarAlquiler(alquiler.getMatricula());
+        if (existente != null) {
+            DBCRUDAlquileres.actualizarAlquiler(alquiler);
         } else {
-            Alquiler existente = DBCRUDAlquileres.buscarAlquiler(alquiler.getMatricula());
-            if (existente != null) {
-                DBCRUDAlquileres.actualizarAlquiler(alquiler);
-            } else {
-                DBCRUDAlquileres.insertarAlquiler(alquiler);
-            }
+            DBCRUDAlquileres.insertarAlquiler(alquiler);
         }
     }
 
