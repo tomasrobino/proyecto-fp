@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vehiculos>
+   <vehiculo>
+      <marca>Honda</marca>
+      <modelo>CBR 650R</modelo>
+      <tipo>motocicleta</tipo>
+      <precio>Desde 45€/día</precio>
+   </vehiculo>
+   <vehiculo>
+      <marca>Seat</marca>
+      <modelo>Ibiza</modelo>
+      <tipo>turismo</tipo>
+      <subtipo>pequeño</subtipo>
+      <precio>Desde 35€/día</precio>
+   </vehiculo>
+</vehiculos>
