@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Sección de vehículos donde se agregarán las tarjetas
-    const vehiculosLista = document.querySelector('.grupo-tarjetas.vehiculos-lista');
+    const vehiculosLista = document.querySelector('.grupo-tarjetas');
 
     // Carga los datos del archivo JSON utilizando fetch
     //La URL debería ser reemplazada por la del servidor

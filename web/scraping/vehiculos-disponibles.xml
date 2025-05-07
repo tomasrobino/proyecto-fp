@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?>
 <html lang="es">
 <head>
     <meta charset="UTF-8"/>
@@ -61,28 +61,19 @@
     <section class="seccion">
         <div class="div">
             <div class="grupo-tarjetas vehiculos-lista">
-                <div class="grupo-tarjetas vehiculos-lista">
-                    <!-- Motocicletas -->
-                    <div class="tarjeta vehiculo-card" data-tipo="motocicleta">
-                        <h3>Honda</h3>
-                        <h3>CBR 650R</h3>
-                        <p class="vehiculo-tipo">Motocicleta</p>
-                        <p class="vehiculo-precio">Desde 45€/día</p>
-                    </div>
-                    <div class="tarjeta vehiculo-card" data-tipo="turismo" data-subtipo="pequeño">
-                        <h3>Seat</h3>
-                        <h3>Ibiza</h3>
-                        <p class="vehiculo-tipo">Turismo - Pequeño</p>
-                        <p class="vehiculo-precio">Desde 35€/día</p>
-                    </div>
+                <!-- Motocicletas -->
+                <div class="tarjeta vehiculo-card" data-tipo="motocicleta">
+                    <h3>Honda</h3>
+                    <h3>CBR 650R</h3>
+                    <p class="vehiculo-tipo">Motocicleta</p>
+                    <p class="vehiculo-precio">Desde 45€/día</p>
                 </div>
-            </div>
-
-            <div class="paginacion">
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#" class="siguiente">Siguiente &raquo;</a>
+                <div class="tarjeta vehiculo-card" data-tipo="turismo" data-subtipo="pequeño">
+                    <h3>Seat</h3>
+                    <h3>Ibiza</h3>
+                    <p class="vehiculo-tipo">Turismo - Pequeño</p>
+                    <p class="vehiculo-precio">Desde 35€/día</p>
+                </div>
             </div>
         </div>
     </section>
