@@ -93,7 +93,9 @@ public class AlquilerCochesApp extends Application {
         MenuItem exitItem = new MenuItem("Salir");
 
         generarJSON.setOnAction(e -> {
-            generarJSON();
+            if (esAdmin) {
+                generarJSON();
+            }
         });
 
         logoutItem.setOnAction(e -> {

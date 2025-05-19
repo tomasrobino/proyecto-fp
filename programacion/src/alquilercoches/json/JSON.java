@@ -18,9 +18,11 @@ import java.util.List;
 import java.util.Optional;
 
 public abstract class JSON {
-    private static final SimpleDateFormat FORMATO_FECHA = new SimpleDateFormat("yyyy-MM-dd");
 
     public static void generarJSON() {
+        // Create a local instance of SimpleDateFormat
+        final SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd");
+        
         FileWriter fileWriter = null;
         List<Vehiculo> vehiculos = DBCRUDVehiculos.getVehiculos();
         List<Alquiler> alquileres = DBCRUDAlquileres.obtenerTodosLosAlquileres();
@@ -50,10 +52,10 @@ public abstract class JSON {
                     fileWriter.write("    \"tipo\": \"" + "motocicleta" + "\",\n");
                 }
                 fileWriter.write("    \"precio\": " + v.getPrecio() + ",\n");
-                fileWriter.write("    \"fabricacion\": \"" + FORMATO_FECHA.format(v.getFabricacion()) + "\",\n");
+                fileWriter.write("    \"fabricacion\": \"" + formatoFecha.format(v.getFabricacion()) + "\",\n");
                 fileWriter.write("    \"mantenimientos\": [\n");
                 for (int j = 0; j < v.getMantenimientos().size(); j++) {
-                    fileWriter.write("        \"" + FORMATO_FECHA.format(v.getMantenimientos().get(j)) + "\"");
+                    fileWriter.write("        \"" + formatoFecha.format(v.getMantenimientos().get(j)) + "\"");
 
                     if (j < v.getMantenimientos().size() - 1) {
                         fileWriter.write(",\n");
