@@ -12,7 +12,6 @@ import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.*;
-import javafx.util.Callback;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
