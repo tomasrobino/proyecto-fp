@@ -8,7 +8,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="lib" level="application" />
+    <orderEntry type="library" name="lib" level="application" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
@@ -48,6 +48,16 @@
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/programacion/lib/javafx" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/programacion/lib/javafx" recursive="false" />
       </library>
     </orderEntry>
   </component>
