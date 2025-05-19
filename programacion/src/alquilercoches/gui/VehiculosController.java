@@ -71,37 +71,32 @@ public class VehiculosController {
 
         TableColumn<Vehiculo, Integer> aptitudCol = new TableColumn<>("Estado");
         aptitudCol.setCellValueFactory(new PropertyValueFactory<>("aptitud"));
-        aptitudCol.setCellFactory(new Callback<>() {
+        aptitudCol.setCellFactory(param -> new TableCell<>() {
             @Override
-            public TableCell<Vehiculo, Integer> call(TableColumn<Vehiculo, Integer> param) {
-                return new TableCell<>() {
-                    @Override
-                    protected void updateItem(Integer item, boolean empty) {
-                        super.updateItem(item, empty);
-                        if (empty || item == null) {
-                            setText(null);
+            protected void updateItem(Integer item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty || item == null) {
+                    setText(null);
+                    setStyle("");
+                } else {
+                    switch (item) {
+                        case 0:
+                            setText("No Apto");
+                            setStyle("-fx-background-color: #ffcccc;");
+                            break;
+                        case 1:
+                            setText("Revisión Próxima");
+                            setStyle("-fx-background-color: #ffffcc;");
+                            break;
+                        case 2:
+                            setText("Apto");
+                            setStyle("-fx-background-color: #ccffcc;");
+                            break;
+                        default:
+                            setText("Desconocido");
                             setStyle("");
-                        } else {
-                            switch (item) {
-                                case 0:
-                                    setText("No Apto");
-                                    setStyle("-fx-background-color: #ffcccc;");
-                                    break;
-                                case 1:
-                                    setText("Revisión Próxima");
-                                    setStyle("-fx-background-color: #ffffcc;");
-                                    break;
-                                case 2:
-                                    setText("Apto");
-                                    setStyle("-fx-background-color: #ccffcc;");
-                                    break;
-                                default:
-                                    setText("Desconocido");
-                                    setStyle("");
-                            }
-                        }
                     }
-                };
+                }
             }
         });
 
@@ -201,6 +196,7 @@ public class VehiculosController {
                             TipoFurgoneta tipoFurgoneta = TipoFurgoneta.valueOf(tipoEspecificoCombo.getValue());
                             vehiculo = new Furgoneta(tipoFurgoneta, precio, fabricacion, matricula, marca, modelo);
                             break;
+                        default:
                     }
 
                     if (vehiculo != null) {
